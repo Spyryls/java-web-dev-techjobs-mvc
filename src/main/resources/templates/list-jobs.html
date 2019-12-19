@@ -11,14 +11,19 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <!-- TODO #1 - Loop through jobs array in ListController. -->
-    <th:block>
-        <table>
-            <tr th:each="jobPostings : ${jobs}">
-                <td th:text="${jobPostings}">Vive la Commune!</td>
+
+        <table class="job-listing">
+            <tr th:each="jobs : ${jobs}">
+                <td>
+                    <p th:text = "${'ID: ' + jobs.id}"></p>
+                    <p th:text = "${'Name: ' + jobs.name}"></p>
+                    <p th:text = "${'Employer: ' + jobs.employer}"></p>
+                    <p th:text = "${'Location: ' + jobs.location}"></p>
+                    <p th:text = "${'Position Type: ' + jobs.positionType}"></p>
+                    <p th:text = "${'Core Skills: ' + jobs.coreCompetency}"></p>
+                </td>
             </tr>
         </table>
-    </th:block>
-
 
 </div>
 
