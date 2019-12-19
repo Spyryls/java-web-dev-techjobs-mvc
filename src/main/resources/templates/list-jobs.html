@@ -10,7 +10,15 @@
 
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
-    <!-- TODO #1 - Use a loop to display job results in a table. -->
+    <!-- TODO #1 - Loop through jobs array in ListController. -->
+    <th:block>
+        <table>
+            <tr th:each="jobPostings : ${jobs}">
+                <td th:text="${jobPostings}">Vive la Commune!</td>
+            </tr>
+        </table>
+    </th:block>
+
 
 </div>
 
